@@ -98,6 +98,7 @@ export interface Database {
           ayah_start: number | null;
           ayah_end: number | null;
           hadith_id: string | null;
+          payload: Json | null;
           created_at: string;
         };
         Insert: {
@@ -114,6 +115,7 @@ export interface Database {
           ayah_start?: number | null;
           ayah_end?: number | null;
           hadith_id?: string | null;
+          payload?: Json | null;
           created_at?: string;
         };
         Update: {
@@ -130,6 +132,7 @@ export interface Database {
           ayah_start?: number | null;
           ayah_end?: number | null;
           hadith_id?: string | null;
+          payload?: Json | null;
           created_at?: string;
         };
         Relationships: [
