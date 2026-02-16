@@ -46,6 +46,9 @@ export async function middleware(request: NextRequest) {
     }
 
     // Redirect to dashboard if already logged in
+    // Redirect to dashboard if already logged in
+    // Note: Disabled to prevent infinite redirect loops with Layout/Server Components
+    /* 
     if (
         user &&
         (request.nextUrl.pathname === '/login' ||
@@ -54,7 +57,8 @@ export async function middleware(request: NextRequest) {
         const url = request.nextUrl.clone();
         url.pathname = '/challenges';
         return NextResponse.redirect(url);
-    }
+    } 
+    */
 
     return supabaseResponse;
 }
